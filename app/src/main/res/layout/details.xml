@@ -196,6 +196,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView11" />
 
     <Button
+        android:id="@+id/add"
         android:layout_width="285dp"
         android:layout_height="50dp"
         android:background="@drawable/shape_bo"

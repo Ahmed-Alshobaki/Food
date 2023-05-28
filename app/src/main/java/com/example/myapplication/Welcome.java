@@ -8,7 +8,7 @@ import android.view.View;
 
 import com.example.myapplication.databinding.WelcomeBinding;
 
-public class MainActivity3 extends AppCompatActivity {
+public class Welcome extends AppCompatActivity {
 WelcomeBinding  binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,14 +18,14 @@ WelcomeBinding  binding;
         binding.Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            Intent intent =new Intent(MainActivity3.this,singIN.class);
+            Intent intent =new Intent(Welcome.this,singIN.class);
             startActivity(intent);
             }
         });
         binding.SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity3.this,SIGNUP.class);
+                Intent intent = new Intent(Welcome.this,SIGNUP.class);
                 startActivity(intent);
 
             }

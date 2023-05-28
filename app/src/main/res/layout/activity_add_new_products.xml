@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_new_products">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#FF6813"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+
+        android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/id_add_phote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:fontFamily="@font/lato"
+        android:text="Add image"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+        app:layout_constraintEnd_toStartOf="@+id/imageView13"
+        app:layout_constraintTop_toTopOf="@+id/imageView13" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="198dp"
+        android:layout_height="148dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/Enter_the_name_of_the_meal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.967"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/design" />
+
+    <TextView
+        android:id="@+id/id_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="Add Id"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Enter_the_name_of_id_add"
+        app:layout_constraintStart_toStartOf="@+id/Enter_the_name_of_id_add" />
+
+    <EditText
+        android:id="@+id/Enter_the_name_of_id_add"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/signup_1"
+        android:hint="Enter the name of the meal"
+        android:inputType="textPersonName"
+        android:paddingStart="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/Enter_the_name_of_the_meal"
+        app:layout_constraintEnd_toEndOf="@+id/Enter_the_name_of_the_meal"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/Enter_the_name_of_the_meal" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="Add Products"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/Meal_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Meal Name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Enter_the_name_of_the_meal"
+        app:layout_constraintStart_toStartOf="@+id/Enter_the_name_of_the_meal" />
+
+    <EditText
+        android:id="@+id/Enter_the_name_of_the_meal"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/signup_1"
+        android:hint="Enter the name of the meal"
+        android:inputType="textPersonName"
+        android:paddingStart="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="description"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/description_add"
+        app:layout_constraintStart_toStartOf="@+id/description_add" />
+
+    <EditText
+        android:id="@+id/description_add"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+
+        android:layout_marginTop="32dp"
+        android:background="@drawable/signup_1"
+        android:hint="Enter the description of the meal"
+        android:inputType="textPersonName"
+        android:paddingStart="7dp"
+        app:layout_constraintEnd_toEndOf="@+id/Enter_the_name_of_the_meal"
+        app:layout_constraintStart_toStartOf="@+id/Enter_the_name_of_the_meal"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_the_name_of_the_meal" />
+
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="price"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Enter_price"
+        app:layout_constraintStart_toStartOf="@+id/Enter_price" />
+
+    <EditText
+        android:id="@+id/Enter_price"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/signup_1"
+        android:hint="Enter Price"
+        android:inputType="textPersonName"
+        android:paddingStart="7dp"
+        app:layout_constraintEnd_toEndOf="@+id/description_add"
+        app:layout_constraintStart_toStartOf="@+id/description_add"
+        app:layout_constraintTop_toBottomOf="@+id/description_add" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.42" />
+
+
+    <TextView
+        android:id="@+id/Rate_stars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="rate"
+
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Enter_Rate_stars"
+        app:layout_constraintStart_toStartOf="@+id/Enter_Rate_stars" />
+
+    <EditText
+        android:id="@+id/Enter_Rate_stars"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/signup_1"
+        android:hint="Enter the rate-"
+        android:inputType="textPersonName"
+        android:paddingStart="7dp"
+        app:layout_constraintEnd_toEndOf="@+id/Enter_price"
+        app:layout_constraintStart_toStartOf="@+id/Enter_price"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_price" />
+
+    <Button
+        android:id="@+id/LOGIN"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/signup_2"
+
+        android:text="LOGIN"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/Enter_Rate_stars"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Enter_Rate_stars"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_Rate_stars" />
+</androidx.constraintlayout.widget.ConstraintLayout>

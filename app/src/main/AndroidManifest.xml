@@ -12,6 +12,12 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Add_new_products"
+            android:exported="false" />
+        <activity
+            android:name=".Control_Panel"
+            android:exported="false" />
+        <activity
             android:name=".Splash"
             android:exported="true">
             <intent-filter>
@@ -19,14 +25,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".SIGNUP"
             android:exported="false" />
         <activity
             android:name=".add"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
         <activity
             android:name=".singIN"
             android:exported="false" />
@@ -34,11 +40,8 @@
             android:name=".aa"
             android:exported="false" />
         <activity
-            android:name=".MainActivity3"
-            android:exported="true">
-
-        </activity>
-
+            android:name=".Welcome"
+            android:exported="true" />
         <activity
             android:name=".Details"
             android:exported="false" />

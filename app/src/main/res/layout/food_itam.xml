@@ -17,8 +17,8 @@
 
         <ImageView
             android:id="@+id/ImageView"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:layout_marginStart="12dp"
             android:layout_marginTop="8dp"
             android:src="@drawable/img22"
@@ -33,7 +33,7 @@
             android:gravity="center"
             android:text="3.5"
             android:textColor="#000000"
-            android:textSize="11sp"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/ImageView"
             app:layout_constraintStart_toEndOf="@+id/ImageView"
@@ -59,6 +59,18 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/ImageFood"
+            app:layout_constraintTop_toBottomOf="@+id/ImageFood" />
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/title"
             app:layout_constraintTop_toBottomOf="@+id/ImageFood" />
 
         <TextView

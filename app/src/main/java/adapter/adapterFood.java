@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,11 +16,13 @@ import java.util.List;
 public class adapterFood extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private List<recycleFood> recycleFoods;
+    onclick onclick;
     FoodItamBinding binding;
 
-    public adapterFood(Context context, List<recycleFood> recycleFoods) {
+    public adapterFood(Context context, List<recycleFood> recycleFoods, onclick onclick) {
         this.context = context;
         this.recycleFoods = recycleFoods;
+        this.onclick = onclick ;
     }
 
     @NonNull
@@ -40,6 +43,13 @@ public class adapterFood extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         myViewHolder.binding.ImageView.setImageResource(recycleFoods.get(position).getImageView());
         myViewHolder.binding.rateMane.setText(recycleFoods.get(position).getRate_mane());
 
+        myViewHolder.binding.getRoot().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             onclick.onitem(position);
+            }
+        });
+
 
 
 
@@ -57,6 +67,9 @@ public class adapterFood extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             super(binding.getRoot());
             this.binding=binding;
         }
-    }
 
+    }
+    public interface  onclick{
+        void  onitem(int position);
+    }
 }
