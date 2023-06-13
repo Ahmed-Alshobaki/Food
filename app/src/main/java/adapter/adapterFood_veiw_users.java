@@ -4,47 +4,47 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.R;
 import com.example.myapplication.databinding.FoodItamBinding;
+import com.example.myapplication.databinding.UsersAdminBinding;
 
 import java.util.List;
 
 import DataBase.DataBase_food;
 import DataBase.Food;
+import DataBase.user;
 
-public class adapterFood extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class adapterFood_veiw_users extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
-    private List<Food> recycleFoods;
+    private List<user> recycleFoods;
     onclick onclick;
-    FoodItamBinding binding;
+    UsersAdminBinding binding;
     DataBase_food dataBase_food;
 
-    public adapterFood(Context context, List<Food> recycleFoods, onclick onclick) {
+    public adapterFood_veiw_users(Context context, List<user> recycleuser) {
         this.context = context;
-        this.recycleFoods = recycleFoods;
-        this.onclick = onclick ;
+        this.recycleFoods = recycleuser;
+
     }
+
 
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        binding = FoodItamBinding.inflate(LayoutInflater.from(context),parent,false);
+        binding = UsersAdminBinding.inflate(LayoutInflater.from(context),parent,false);
         return new myViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         myViewHolder  myViewHolder= (myViewHolder) holder;
-        myViewHolder.binding.description.setText(recycleFoods.get(position).getDescription());
-        myViewHolder.binding.evaluate.setText(recycleFoods.get(position).getRate());
-        myViewHolder.binding.Price.setText(recycleFoods.get(position).getPrice());
-        myViewHolder.binding.title.setText(recycleFoods.get(position).getName());
-        myViewHolder.binding.ImageFood.setImageBitmap(recycleFoods.get(position).getImage());
+        myViewHolder.binding.NameSeen.setText(recycleFoods.get(position).getName());
+        myViewHolder.binding.PasswordSeen.setText(recycleFoods.get(position).getPassword());
+        myViewHolder.binding.EmailSeen.setText(recycleFoods.get(position).getEmail());
+
 
 
 
@@ -59,8 +59,6 @@ public class adapterFood extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
 
-
-
     }
 
     @Override
@@ -68,10 +66,10 @@ public class adapterFood extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         return recycleFoods.size();
     }
     public class myViewHolder extends RecyclerView.ViewHolder{
-    FoodItamBinding binding;
+        UsersAdminBinding binding;
 
 
-        public myViewHolder( FoodItamBinding binding) {
+        public myViewHolder( UsersAdminBinding binding) {
             super(binding.getRoot());
             this.binding=binding;
         }
@@ -79,9 +77,5 @@ public class adapterFood extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
     public interface  onclick{
         void  onitem(int position);
-        void  onitemlike(int position);
-
-
     }
-
 }

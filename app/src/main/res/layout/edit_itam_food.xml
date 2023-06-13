@@ -4,19 +4,21 @@
 
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="170dp"
-    android:layout_height="210dp"
-    android:layout_marginStart="7dp"
-    android:layout_marginTop="2dp"
-
-
+    android:layout_height="240dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
     app:cardCornerRadius="10dp"
     app:cardElevation="5dp"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="170dp"
 
-        android:layout_height="match_parent">
+
+
+        android:layout_height="240dp">
 
         <ImageView
             android:id="@+id/ImageView"
@@ -48,7 +50,6 @@
             android:layout_height="76dp"
             android:layout_marginTop="4dp"
             android:src="@drawable/img_1"
-            android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ImageView" />
@@ -65,17 +66,17 @@
             app:layout_constraintStart_toStartOf="@+id/ImageFood"
             app:layout_constraintTop_toBottomOf="@+id/ImageFood" />
 
-        <TextView
-            android:id="@+id/id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginTop="5dp"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/title"
-            app:layout_constraintTop_toBottomOf="@+id/ImageFood" />
+<!--        <TextView-->
+<!--            android:id="@+id/id"-->
+<!--            android:layout_width="20dp"-->
+<!--            android:layout_height="16dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:textColor="#000000"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/title"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/ImageFood" />-->
 
         <TextView
             android:id="@+id/description"
@@ -105,8 +106,8 @@
             android:id="@+id/Price"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:text="20.00"
             android:layout_marginStart="0.2dp"
+            android:text="20.00"
             android:textColor="#FF6813"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -114,6 +115,40 @@
             app:layout_constraintStart_toEndOf="@+id/rate_mane"
             app:layout_constraintTop_toTopOf="@+id/rate_mane" />
 
+
+        <TextView
+            android:id="@+id/Id_iteam_food_text"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:text="Id :"
+            android:textColor="#FF6813"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/rate_mane"
+            app:layout_constraintTop_toBottomOf="@+id/Price" />
+
+        <TextView
+            android:id="@+id/Id_number"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="1"
+            android:textColor="#FF6813"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/Id_iteam_food_text"
+            app:layout_constraintEnd_toEndOf="@+id/description"
+            app:layout_constraintTop_toTopOf="@+id/Id_iteam_food_text" />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/delete"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

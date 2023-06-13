@@ -17,6 +17,12 @@ public class Control_Panel extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding =ActivityControlPanelBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        Intent intent = getIntent();
+        intent.getStringExtra("email");
+        intent.getStringExtra("p");
+
+
+
         binding.addNewProducts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -24,5 +30,26 @@ public class Control_Panel extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        binding.imageView5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(Control_Panel.this,singIN.class);
+                startActivity(intent);
+            }
+        });
+            binding.EditProduct.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent =new Intent(Control_Panel.this,edit_admin_food_item.class);
+                    startActivity(intent);
+                }
+            });
+            binding.profileAll.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent =new Intent(Control_Panel.this,users_view.class);
+                    startActivity(intent);
+                                    }
+            });
     }
 }

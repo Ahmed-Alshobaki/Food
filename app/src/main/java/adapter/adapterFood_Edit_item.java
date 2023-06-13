@@ -4,12 +4,10 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.R;
 import com.example.myapplication.databinding.FoodItamBinding;
 
 import java.util.List;
@@ -17,14 +15,14 @@ import java.util.List;
 import DataBase.DataBase_food;
 import DataBase.Food;
 
-public class adapterFood extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class adapterFood_Edit_item extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private List<Food> recycleFoods;
     onclick onclick;
     FoodItamBinding binding;
     DataBase_food dataBase_food;
 
-    public adapterFood(Context context, List<Food> recycleFoods, onclick onclick) {
+    public adapterFood_Edit_item(Context context, List<Food> recycleFoods, onclick onclick) {
         this.context = context;
         this.recycleFoods = recycleFoods;
         this.onclick = onclick ;
@@ -44,7 +42,6 @@ public class adapterFood extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         myViewHolder.binding.evaluate.setText(recycleFoods.get(position).getRate());
         myViewHolder.binding.Price.setText(recycleFoods.get(position).getPrice());
         myViewHolder.binding.title.setText(recycleFoods.get(position).getName());
-        myViewHolder.binding.ImageFood.setImageBitmap(recycleFoods.get(position).getImage());
 
 
 
@@ -55,8 +52,6 @@ public class adapterFood extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
              onclick.onitem(position);
             }
         });
-
-
 
 
 
@@ -79,9 +74,5 @@ public class adapterFood extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
     public interface  onclick{
         void  onitem(int position);
-        void  onitemlike(int position);
-
-
     }
-
 }

@@ -8,5 +8,6 @@
         android:width="1.5dp"
 
         />
+    <solid android:color="#FF6813"/>
 
 </shape>

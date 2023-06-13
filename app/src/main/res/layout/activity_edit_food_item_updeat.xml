@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
-        android:text="Add Products"
+        android:text="updet Products"
         android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -86,7 +86,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/lato"
-                    android:text="Add imag"
+                    android:text="updet imag"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     android:textStyle="bold"
@@ -110,7 +110,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/lato"
-                    android:text=" Add ID "
+                    android:text=" updet ID "
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     android:textStyle="bold"
@@ -122,7 +122,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/lato"
-                    android:text="Add Qtyy"
+                    android:text="updet Qty"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     android:textStyle="bold"
@@ -134,7 +134,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Meal Name"
+                    android:text="updet Name"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -148,7 +148,8 @@
                     android:layout_height="55dp"
                     android:background="@drawable/signup_1"
                     android:hint="Enter Id"
-                    android:inputType="phone"
+                    android:layout_marginTop="5dp"
+                    android:inputType="textPersonName"
                     android:paddingStart="7dp"
                     app:layout_constraintBottom_toTopOf="@+id/id_add_Qty"
                     app:layout_constraintEnd_toEndOf="@+id/Qty"
@@ -163,6 +164,7 @@
                     android:hint="Enter Qty"
                     android:inputType="number"
                     android:paddingStart="7dp"
+
                     app:layout_constraintBottom_toTopOf="@+id/Meal_Name"
                     app:layout_constraintEnd_toEndOf="@+id/Enter_the_name_of_the_meal"
                     app:layout_constraintStart_toStartOf="@+id/Enter_the_name_of_the_meal" />
@@ -189,7 +191,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="2dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="description"
+                    android:text=" updet description"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -217,7 +219,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="2dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="price"
+                    android:text="updet price"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -231,7 +233,7 @@
                     android:layout_marginTop="32dp"
                     android:background="@drawable/signup_1"
                     android:hint="Enter Price"
-                    android:inputType="phone"
+                    android:inputType="number"
                     android:paddingStart="7dp"
                     app:layout_constraintEnd_toEndOf="@+id/description_add"
                     app:layout_constraintStart_toStartOf="@+id/description_add"
@@ -251,7 +253,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="2dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="rate"
+                    android:text=" updet rate"
 
                     android:textColor="@color/black"
                     android:textSize="20sp"
@@ -263,15 +265,15 @@
                     android:id="@+id/Enter_Rate_stars"
                     android:layout_width="0dp"
                     android:layout_height="55dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="28dp"
                     android:background="@drawable/signup_1"
                     android:hint="Enter the rate-"
-                    android:inputType="numberSigned"
+                    android:inputType="number"
                     android:paddingStart="7dp"
                     app:layout_constraintEnd_toEndOf="@+id/Enter_price"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/Enter_price"
                     app:layout_constraintTop_toBottomOf="@+id/Enter_price" />
-
                 <TextView
                     android:id="@+id/type"
                     android:layout_width="wrap_content"
@@ -317,10 +319,10 @@
                         android:text="Sandwich" />
                 </RadioGroup>
 
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

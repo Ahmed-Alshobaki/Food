@@ -1,64 +1,57 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link favoritess#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.example.myapplication.databinding.FragmentFavoritessBinding;
+import com.example.myapplication.databinding.FragmentPersonaalBinding;
+
+import DataBase.DataBase_food;
+import adapter.adapterFood;
+
+
 public class favoritess extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public favoritess() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment favoritess.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static favoritess newInstance(String param1, String param2) {
-        favoritess fragment = new favoritess();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
+   FragmentFavoritessBinding binding;
+    DataBase_food dataBase_food;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_favoritess, container, false);
+        binding= FragmentFavoritessBinding.inflate(inflater, container, false);
+        View v=  binding.getRoot();
+        DataBase_food dataBase_food= new DataBase_food(getContext());
+        adapterFood adapterFood_Pizza = new adapterFood(getContext(), dataBase_food.SearchFood_like(), new adapterFood.onclick() {
+            @Override
+            public void onitem(int position) {
+                Intent intent=new Intent(getContext(),Details.class);
+                intent.putExtra("name",dataBase_food.getDoodList().get(position).getName());
+                intent.putExtra("Id",dataBase_food.getDoodList().get(position).getId());
+                intent.putExtra("Qty",dataBase_food.getDoodList().get(position).getQty());
+                intent.putExtra("Description",dataBase_food.getDoodList().get(position).getDescription());
+                intent.putExtra("Rate",dataBase_food.getDoodList().get(position).getRate());
+                intent.putExtra("Price",dataBase_food.getDoodList().get(position).getPrice());
+                startActivity(intent);
+            }
+
+            @Override
+            public void onitemlike(int position) {
+
+            }
+        });
+        binding.recyclerview.setAdapter(adapterFood_Pizza);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        binding.recyclerview.setLayoutManager(linearLayoutManager);
+
+        return v;
+
     }
+
 }

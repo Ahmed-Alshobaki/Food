@@ -12,6 +12,21 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".edit_profile"
+            android:exported="false" />
+        <activity
+            android:name=".SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Edit_food_item_updeat"
+            android:exported="false" />
+        <activity
+            android:name=".users_view"
+            android:exported="false" />
+        <activity
+            android:name=".edit_admin_food_item"
+            android:exported="false" />
+        <activity
             android:name=".Add_new_products"
             android:exported="false" />
         <activity

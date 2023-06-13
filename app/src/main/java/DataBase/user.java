@@ -1,16 +1,35 @@
 package DataBase;
 
+import android.graphics.Bitmap;
+
 public class user {
     int id;
     String name ;
     String Email;
     String password;
+    Bitmap Bitmap_image;
 
-    public user( String name, String email, String password) {
+    public Bitmap getImag() {
+        return Bitmap_image;
+    }
+
+    public void setImag(Bitmap imag) {
+        this.Bitmap_image = imag;
+    }
+
+    public user(String name, String email, String password) {
 
         this.name = name;
         Email = email;
         this.password = password;
+
+    }
+    public user( String name, String email, String password, Bitmap imag) {
+
+        this.name = name;
+        Email = email;
+        this.password = password;
+        this.Bitmap_image =imag;
     }
     public user( ) {
 

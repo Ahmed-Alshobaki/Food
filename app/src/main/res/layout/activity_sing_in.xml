@@ -87,7 +87,7 @@
         android:id="@+id/Password"
         android:layout_width="0dp"
         android:layout_height="55dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/signup_1"
         android:ems="10"
         android:hint="Password"
@@ -104,7 +104,7 @@
         android:id="@+id/LOGIN"
         android:layout_width="0dp"
         android:layout_height="52dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="45dp"
         android:background="@drawable/signup_2"
         android:text="LOGIN"
 
@@ -163,18 +163,18 @@
     <androidx.cardview.widget.CardView
         android:layout_width="45dp"
         android:layout_height="45dp"
-        app:cardCornerRadius="5dp"
         android:layout_marginEnd="15dp"
+        android:background="#F6F5F5"
+        app:cardCornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="@+id/cardView3"
         app:layout_constraintEnd_toStartOf="@+id/cardView3"
-        android:background="#F6F5F5"
         app:layout_constraintTop_toTopOf="@+id/cardView3">
 
         <ImageView
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:background="#F6F5F5"
             android:layout_marginEnd="10dp"
+            android:background="#F6F5F5"
 
             android:src="@drawable/img_13" />
 
@@ -226,4 +226,14 @@
         app:layout_constraintBottom_toBottomOf="@+id/Donthaveanaccount"
         app:layout_constraintStart_toEndOf="@+id/Donthaveanaccount"
         app:layout_constraintTop_toTopOf="@+id/Donthaveanaccount" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remember"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/LOGIN"
+        app:layout_constraintStart_toStartOf="@+id/Password"
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 </androidx.constraintlayout.widget.ConstraintLayout>
